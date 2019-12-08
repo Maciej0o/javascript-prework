@@ -40,3 +40,21 @@ if(playerInput == '1'){
 }
 
 printMessage('Twój ruch to: ' + playerMove);
+
+if( computerMove == 'kamień' && playerMove == "papier") {
+  printMessage('Ty wygrywasz!!');
+}else if( computerMove == 'papier' && playerMove == 'kamień') {
+  printMessage('Przegrywasz.')
+}else if( computerMove == 'papier' && playerMove == 'nożyczki') {
+  printMessage('Ty wygrywasz!')
+}else if( computerMove == 'nożyczki' && playerMove == 'papier') {
+  printMessage('Przegrywasz.')
+}else if( computerMove == 'nożyczki' && playerMove == 'kamień') {
+  printMessage('Ty wygrywasz!')
+}else if( computerMove == 'kamień' && playerMove == 'nożyczki') {
+  printMessage('Przegrywasz.')
+}else if( computerMove == playerMove) {
+  printMessage('Remis.')
+}else if( playerMove == 'nieznany ruch') {
+  printMessage('Podałeś złą liczbę.')
+}
