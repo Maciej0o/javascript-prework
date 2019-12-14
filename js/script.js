@@ -18,18 +18,18 @@
       }
     }
 
-      function displayResult (argComputerMove, argPlayerMove){
+      const result = function (argComputerMove, argPlayerMove){
       console.log('moves:', argComputerMove, argPlayerMove);
       if( argComputerMove == 'kamień' && argPlayerMove == "papier"
       ||  argComputerMove == 'papier' && argPlayerMove == 'nożyczki'
       ||  argComputerMove == 'nożyczki' && argPlayerMove == 'kamień'){
-        return 'Ty wygrywasz!!';
+        return printMessage('Ty wygrywasz!!');
       }else if( argComputerMove == 'papier' && argPlayerMove == 'kamień'
       ||  argComputerMove == 'nożyczki' && argPlayerMove == 'papier'
       ||  argComputerMove == 'kamień' && argPlayerMove == 'nożyczki'){
-        return 'Przegrywasz.'
+        return printMessage('Przegrywasz.')
       }else{
-        return 'Remis.'
+        return printMessage('Remis.')
       }
     }
 
@@ -43,8 +43,9 @@
     const playerMove = getMoveName(playerInput);
     printMessage('Twój ruch to: ' + playerMove);
 
-    const result = displayResult(computerMove, playerMove);
-    printMessage(result);
+    //const result = displayResult(computerMove, playerMove);
+    //printMessage(result);
+    result(computerMove, playerMove);
   }
 
   document.getElementById('play-rock').addEventListener('click', function(){
